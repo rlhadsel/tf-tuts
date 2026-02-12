@@ -1,9 +1,8 @@
-terraform {
- required_providers {
-   aws = {
-     source  = "hashicorp/aws"
-     version = "~> 4.18.0"
-    }
+eprovider "aws" {
+  default_tags {
+    tags = var.global_tags
   }
+  profile = "rhadsell-psdev"
+  region  = var.region
 }
 
